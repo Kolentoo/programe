@@ -1,0 +1,11 @@
+<!--components/star.wxml-->
+<view class="starbox">
+  <view class="stars">
+    <image wx:for="{{starscore>9?[1,2,3,4,5]:starscore>7?[1,2,3,4]:starscore>5?[1,2,3]:starscore>3?[1,2]:starscore>1?[1]:[]}}" wx:key="str1" src="../../images/star2.png" class="starnum">
+    </image>
+  </view>
+  <view class="stars">
+    <image wx:for="{{starscore>9?[]:starscore>7?[1]:starscore>5?[1,2]:starscore>3?[1,2,3]:starscore>1?[1,2,3,4]:[1,2,3,4,5]}}" wx:key="str2" src="../../images/star1.png" class="starnum">
+    </image>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<!--components/moviescroll/scroll.wxml-->
+<scroll-view scroll-x="true" class="scroll">
+    <view wx:for="{{moviedata}}" wx:key="this" class="film-list">
+      <navigator url=''>
+        <image src="{{item.images.large}}" class="film-image"/> 
+        <text class="name">{{item.title}}</text>
+        <view class="scorebox">
+          <star starscore="{{item.rating.average}}"></star>
+          <text class="score">{{item.rating.average}}</text>
+        </view>
+      </navigator>
+    </view>
+</scroll-view>

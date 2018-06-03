@@ -1,0 +1,21 @@
+<view class="films" id="films">
+  <view class="recommend">
+    <view class="playing movies">
+      <text class="mtitle">{{playingtitle}}</text>
+      <scroll moviedata="{{playing}}"></scroll>
+    </view>
+    <view class="coming movies">
+      <text class="mtitle">{{comingtitle}}</text>
+      <scroll moviedata="{{coming}}"></scroll>
+    </view>
+    <view class="top movies">
+      <text class="mtitle">{{toptitle}}</text>
+      <scroll moviedata="{{top}}"></scroll>
+    </view>
+  </view>
+  <view class="moretype">
+  
+  </view>
+</view>
+
+ <bottom bottomdata="{{bottomtype}}"></bottom> 

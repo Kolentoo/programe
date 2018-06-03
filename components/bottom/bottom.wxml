@@ -1,0 +1,4 @@
+<!--components/bottom/bottom.wxml-->
+<view class="bottom">
+  <text bindtap="change" data-type="{{index}}" class="bottom-list {{item.active===true?'bottom-on':''}}" wx:for="{{bottomdata}}" wx:key="this">{{item.name}}</text>
+</view>

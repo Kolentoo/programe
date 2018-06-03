@@ -1,0 +1,4 @@
+/* components/star.wxss */
+
+.stars {display: inline-block;}
+.starnum {width:15px;height:15px;margin:0 1px;}
