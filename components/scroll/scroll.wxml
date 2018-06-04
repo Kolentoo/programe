@@ -2,11 +2,16 @@
 <scroll-view scroll-x="true" class="scroll">
     <view wx:for="{{moviedata}}" wx:key="this" class="film-list">
       <navigator url=''>
-        <image src="{{item.images.large}}" class="film-image"/> 
+        <image src="{{imgurl}}{{item.newPic}}" class="film-image"/>  
+        <!-- <image wx:if="{{item.cover}}" src="https://images.weserv.nl/?url={{item.cover.substring(7)}}" class="film-image"/>  -->
         <text class="name">{{item.title}}</text>
-        <view class="scorebox">
+        <view class="scorebox" wx:if="{{item.rating.average>=0}}">
           <star starscore="{{item.rating.average}}"></star>
           <text class="score">{{item.rating.average}}</text>
+        </view>
+        <view class="scorebox" wx:if="{{item.score>=0}}">
+          <star starscore="{{item.score}}"></star>
+          <text class="score">{{item.score}}</text>
         </view>
       </navigator>
     </view>

@@ -21,20 +21,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    change(event) {
-      var num = event.currentTarget.dataset.type;
-      let oldbottom = this.properties.bottomdata
-      let newbottom = oldbottom.map((current,index,arr)=>{
-        if(num===index){
-          current.active=true
-        }else{
-          current.active=false
-        }
-      })
-      this.setData({
-        oldbottom:newbottom
-      })
-      console.log(oldbottom)
+    tabchange: function(e) {
+      let num = e.currentTarget.dataset.type;
+      let active = e.currentTarget.dataset.item;
+      if (active===false){
+        this.triggerEvent('event', num);
+      }
+      
     }
   }
 })

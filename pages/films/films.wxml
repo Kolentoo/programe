@@ -1,5 +1,5 @@
 <view class="films" id="films">
-  <view class="recommend">
+  <view class="recommend" hidden='{{!show}}'>
     <view class="playing movies">
       <text class="mtitle">{{playingtitle}}</text>
       <scroll moviedata="{{playing}}"></scroll>
@@ -13,9 +13,44 @@
       <scroll moviedata="{{top}}"></scroll>
     </view>
   </view>
-  <view class="moretype">
-  
+  <view class="moretype" hidden='{{show}}'>
+    <view class="anime movies">
+      <text class="mtitle">{{animetitle}}</text>
+      <scroll moviedata="{{anime}}"></scroll>
+    </view>
+    <view class="story movies">
+      <text class="mtitle">{{storytitle}}</text>
+      <scroll moviedata="{{story}}"></scroll>
+    </view>
+    <view class="happy movies">
+      <text class="mtitle">{{happytitle}}</text>
+      <scroll moviedata="{{happy}}"></scroll>
+    </view>
+    <view class="action movies">
+      <text class="mtitle">{{actiontitle}}</text>
+      <scroll moviedata="{{action}}"></scroll>
+    </view>
+    <view class="love movies">
+      <text class="mtitle">{{lovetitle}}</text>
+      <scroll moviedata="{{love}}"></scroll>
+    </view>
+    <view class="scientist movies">
+      <text class="mtitle">{{scientisttitle}}</text>
+      <scroll moviedata="{{scientist}}"></scroll>
+    </view>
+    <view class="scare movies">
+      <text class="mtitle">{{scaretitle}}</text>
+      <scroll moviedata="{{scare}}"></scroll>
+    </view>
+    <view class="horror movies">
+      <text class="mtitle">{{horrortitle}}</text>
+      <scroll moviedata="{{horror}}"></scroll>
+    </view>
+    <view class="disaster movies">
+      <text class="mtitle">{{disastertitle}}</text>
+      <scroll moviedata="{{disaster}}"></scroll>
+    </view>
   </view>
 </view>
 
- <bottom bottomdata="{{bottomtype}}"></bottom> 
+ <bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom> 

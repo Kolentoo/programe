@@ -14,8 +14,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    imgurl:'https://images.weserv.nl/?url='
   },
+
 
   /**
    * 组件的方法列表
