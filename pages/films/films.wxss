@@ -1,5 +1,6 @@
 /* pages/home/home.wxss */
 
+.films {padding-bottom:40px;}
 .movies {padding:10px 0 0 10px;}
 .mtitle {font-size: 16px;font-weight: bold;}
 

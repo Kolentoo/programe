@@ -1,1 +1,26 @@
 /* pages/detail/detail.wxss */
+
+.banner {display:flex;justify-content: center;align-items: center;background:rgba(30,29,35,0.75);}
+.moviepic {width: 75%;height:400px;margin:20px 0;box-shadow:0 0 5px rgba(0,0,0,0.08);border-radius:8px;}
+
+.detail .moviecontent {padding:10px;display:flex;justify-content: space-between;margin-top: 10px;}
+.detail .movieinfo {width: 65%;color:#8f8f94;line-height: 1.5;}
+.detail .movieinfo .name {font-size: 20px;font-weight:bold;color:#333;margin-bottom:5px;}
+.detail .movieinfo .normal {font-size: 14px;}
+.detail .evaluate {width: 95px;height: 95px;padding:6px;box-shadow:0 0 5px rgba(0,0,0,0.08);text-align: center;margin:10px 0 0 0;
+border-radius:8px;}
+.detail .evaluate .p1 {color:#666;font-size: 12px;}
+.detail .evaluate .score {font-size: 19px;color:#333;}
+.detail .evaluate .member {font-size: 12px;margin-top: 4px}
+.detail .evaluate .member i{color:#e09015;}
+.detail .mstory {padding:10px}
+.detail .mstory .title {color:#aaa;font-size: 16px;}
+.detail .mstory .p1 {font-size: 14px;margin-top: 7px;color:#8f8f94;line-height: 1.5;text-indent: 2em;}
+
+.detail scroll-view {display: flex;width: 100%;height: 185px;flex-direction:row;justify-content:center;white-space: nowrap;margin-top:10px;}
+.detail scroll-view .actor-list {width: 120px;margin-right: 10px;display: inline-block;}
+.detail scroll-view .actor-list:last-child {margin-right: 0;}
+.detail scroll-view .photo {width: 100%;height:160px;border-radius:10px;}
+.detail scroll-view .actor-name {font-size: 14px;text-align: center;margin-top: 3px;}
+.actor-box {margin:20px 10px 10px;}
+.actor-title {font-size: 16px;color:#aaa;}

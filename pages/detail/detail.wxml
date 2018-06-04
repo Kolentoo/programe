@@ -1,2 +1,49 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>  
+<view class="detail">
+  <view class='banner'>
+    <image class="moviepic" src='{{imgurl}}{{info.newPic}}'></image>
+  </view>
+  <view class="moviecontent">
+    <view class="movieinfo">
+      <view class="name">{{info.title}}</view>
+      <view class="originname normal">原名：{{info.original_title}}</view>
+      <view class="year normal">年份：{{info.year}}</view>
+      <view class="country normal">国家：<em wx:for="{{info.countries}}" wx:key="this">{{item}} </em></view>
+      <view class="type normal">
+          类型：
+          <em wx:for="{{info.genres}}" wx:key="this">{{item}} </em>
+      </view>
+      <view class="othername normal">别名：<em wx:for="{{info.aka}}" wx:key="this">{{item}}</em></view>
+    </view>
+    <view class="evaluate">
+      <view class="p1">评分</view>
+      <star starscore="{{info.rating.average}}"></star>
+      <view class="score b">{{info.rating.average}}</view>
+      <view class="member"><i class="b">{{info.collect_count}}</i> 评价</view>
+    </view>
+  </view>
+  <view class="mstory">
+    <view class="title">剧情简介</view>
+    <view class="p1">
+        {{info.summary}}
+    </view>
+  </view>
+  <view class="actor-box">
+    <text class="actor-title">演员</text>
+    <scroll-view scroll-x class="actor">
+      <view class="actor-list" wx:for="{{actorinfo}}" wx:key="this">
+        <image class="photo" src="{{imgurl}}{{item.actorPic}}"></image>
+        <view class="actor-name">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="actor-box">
+    <text class="actor-title">导演</text>
+    <scroll-view scroll-x class="actor">
+      <view class="actor-list" wx:for="{{directorsinfo}}" wx:key="this">
+        <image class="photo" src="{{imgurl}}{{item.directorsPic}}"></image>
+        <view class="actor-name">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
