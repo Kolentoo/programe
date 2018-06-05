@@ -14,7 +14,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
   },
 
   /**
@@ -24,9 +23,9 @@ Component({
     tabchange: function(e) {
       let num = e.currentTarget.dataset.type;
       let active = e.currentTarget.dataset.item;
-      if (active===false){
+      // if (active===false){
         this.triggerEvent('event', num);
-      }
+      // }
       
     }
   }

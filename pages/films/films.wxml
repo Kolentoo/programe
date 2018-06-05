@@ -53,7 +53,5 @@
   </view>
 </view>
 
-<view class="filmbottom">
   <bottom bindevent="changetype" bottomdata="{{bottomtype}}">
   </bottom>  
-</view>

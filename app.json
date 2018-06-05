@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/tv/tv",
     "pages/films/films",
+    "pages/book/book",
+    "pages/anime/anime",
+    "pages/tv/tv",
+    
+    "pages/robot/robot",
     "pages/detail/detail",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/person/person"
     
@@ -29,7 +32,7 @@
         "text": "电视"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/anime/anime",
         "color": "#8f8f94",
         "selectedColor": "#e09015",
         "text": "漫综"
@@ -41,7 +44,7 @@
         "text": "图书"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/robot/robot",
         "color": "#8f8f94",
         "selectedColor": "#e09015",
         "text": "专题"

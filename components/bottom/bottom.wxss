@@ -2,5 +2,7 @@
 
 .bottom {position:fixed;background: #fff;display: flex;justify-content: center;top:0;left:0;width:100%;height:30px;}
 .bottom .bottom-list {font-size: 14px;color:#333;line-height: 30px;margin:0 auto;text-align: center;
-border-bottom:1px solid #e6e6e6;}
+border-bottom:1px solid #e6e6e6;transition:all ease 0.2s;}
 .bottom .bottom-on {color:#e09015;border-bottom:1px solid #e09015;}
+.moviebottom .bottom-list {width: 50%;}
+.tvbottom .bottom-list {width:16.666%;}

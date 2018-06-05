@@ -87,5 +87,6 @@
   </view>
 </view>
 
-
-<bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom>  
+<view class="tvbottom" id='tvbottom'>
+  <bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom>  
+</view>

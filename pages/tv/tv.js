@@ -90,7 +90,7 @@ Page({
       }
       return { name: current.name, active: current.active }
     })
-
+    console.log(newbottom)
     this.setData({
       bottomtype: newbottom
     })
@@ -123,7 +123,7 @@ Page({
         },
         success: (res) => {
           var newhotnew = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             hotnew: newhotnew
@@ -142,7 +142,7 @@ Page({
         },
         success: (res) => {
           var newhothot = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             hothot: newhothot
@@ -161,7 +161,7 @@ Page({
         },
         success: (res) => {
           var newhotnice = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             hotnice: newhotnice
@@ -180,7 +180,7 @@ Page({
         },
         success: (res) => {
           var newamericanew = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             americanew: newamericanew
@@ -199,7 +199,7 @@ Page({
         },
         success: (res) => {
           var newamericahot = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             americahot: newamericahot
@@ -218,7 +218,7 @@ Page({
         },
         success: (res) => {
           var newamericanice = res.data.subjects.map((current, index, arr) => {
-            return { ...current, newPic: current.images.large.substring(7) }
+            return { ...current, newPic: current.cover.substring(7) }
           })
           this.setData({
             americanice: newamericanice
@@ -238,7 +238,7 @@ Page({
           },
           success: (res) => {
             var newenglandnew = res.data.subjects.map((current, index, arr) => {
-              return { ...current, newPic: current.images.large.substring(7) }
+              return { ...current, newPic: current.cover.substring(7) }
             })
             this.setData({
               englandnew: newenglandnew
@@ -345,7 +345,7 @@ Page({
 
       },500)
 
-      settimeout(()=>{
+      setTimeout(()=>{
         wx.request({
           url: `${kolento}/japan/new`,
           data: {
@@ -355,7 +355,7 @@ Page({
           },
           success: (res) => {
             var newjapannew = res.data.subjects.map((current, index, arr) => {
-              return { ...current, newPic: current.images.large.substring(7) }
+              return { ...current, newPic: current.cover.substring(7) }
             })
             this.setData({
               japannew: newjapannew
