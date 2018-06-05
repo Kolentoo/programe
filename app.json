@@ -1,15 +1,51 @@
 {
   "pages": [
+    "pages/tv/tv",
     "pages/films/films",
     "pages/detail/detail",
     "pages/index/index",
     "pages/logs/logs",
     "pages/person/person"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/films/films",
+        "color": "#8f8f94",
+        "selectedColor": "#e09015",
+        "text": "电影"
+      },
+      {
+        "pagePath": "pages/tv/tv",
+        "color": "#8f8f94",
+        "selectedColor": "#e09015",
+        "text": "电视"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "color": "#8f8f94",
+        "selectedColor": "#e09015",
+        "text": "漫综"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "color": "#8f8f94",
+        "selectedColor": "#e09015",
+        "text": "图书"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "color": "#8f8f94",
+        "selectedColor": "#e09015",
+        "text": "专题"
+      }
+    ]
   }
 }

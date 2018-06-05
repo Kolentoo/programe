@@ -1,2 +1,33 @@
 <!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="person">
+  <view class="content">
+    <view class="infobox clearfix">
+      <image class="actor-pic" src="{{imgurl}}{{person.personPic}}"></image>
+      <view class="infotext">
+          <view class="name">{{person.name}}</view>
+          <view class="enname"><text class="information">英文名：</text>{{person.name_en}}</view>
+          <view class="bornplace"><text class="information">出生地：</text>{{person.born_place}}</view>
+          <view class="nickname"><text class="information">别名：</text><text wx:for="{{person.aka}}" wx:key="this">{{item}} </text>     </view>
+      </view>
+    </view>
+  </view>
+  <view class="works">
+      <view class="title">代表作品</view>
+      <view class="work-con">
+          <view class="work-list clearfix" wx:for="{{works}}" wx:key="this">
+            <navigator class="link" url='../../pages/detail/detail?id={{item.subject.id}}'>
+              <image class="work-pic" src="{{imgurl}}{{item.newpic}}"></image>
+              <view class="work-detail">
+                  <view class="workname b">{{item.subject.title}}</view>
+                  <view class="originname">{{item.subject.original_title}}</view>
+                  <view class="other">
+                      年份：{{item.subject.year}}
+                      <em class="types" wx:for="{{item.subject.genres}}" wx:key="this">{{item}} </em>
+                  </view>
+                  <view class="comment-num">{{item.subject.collect_count}} 人评价</view>
+              </view>
+            </navigator>
+          </view>
+      </view>
+  </view>
+</view>

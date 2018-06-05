@@ -17,6 +17,7 @@ Page({
   onLoad: function (options) {
     let kolento = 'https://xkolento.cn';
     let movieid = options.id;
+    console.log(movieid)
     wx.request({
       url: `${kolento}/v2/movie/subject/${movieid}`,
       data: {
@@ -28,12 +29,12 @@ Page({
         res.data.newPic = res.data.images.large.substring(7);
         let newinfo1 = res.data.casts.map((current,index,arr)=>{
           return { 
-            ...current.avatars, actorPic: current.avatars.large.substring(7),name:current.name
+            ...current.avatars, actorPic: current.avatars.large.substring(7),name:current.name,id:current.id
             }
         })
         let newinfo2 = res.data.directors.map((current, index, arr) => {
           return {
-            ...current.avatars, directorsPic: current.avatars.large.substring(7), name: current.name
+            ...current.avatars, directorsPic: current.avatars.large.substring(7), name: current.name, id: current.id
           }
         })
         

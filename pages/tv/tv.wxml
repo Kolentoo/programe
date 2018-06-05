@@ -1,0 +1,91 @@
+<!--pages/tv/tv.wxml-->
+
+<view class="tv">
+  <view class="type hot" hidden="{{show!=='热门'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{hotnew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{hothot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{hotnice}}"></scroll>
+    </view>
+  </view>
+  <view class="type america" hidden="{{show!=='美剧'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{americanew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{americahot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{americanice}}"></scroll>
+    </view>
+  </view>
+  <view class="type england" hidden="{{show!=='英剧'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{englandnew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{englandhot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{englandnice}}"></scroll>
+    </view>
+  </view>
+  <view class="type korea" hidden="{{show!=='韩剧'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{koreanew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{koreahot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{koreanice}}"></scroll>
+    </view>
+  </view>
+  <view class="type japan" hidden="{{show!=='日剧'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{japannew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{japanhot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{japannice}}"></scroll>
+    </view>
+  </view>
+  <view class="type china" hidden="{{show!=='国剧'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{chinanew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{chinahot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{chinanice}}"></scroll>
+    </view>
+  </view>
+</view>
+
+
+<bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom>  

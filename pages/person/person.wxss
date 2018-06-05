@@ -1,1 +1,25 @@
 /* pages/person/person.wxss */
+
+.person .content {padding: 10px;margin-top: 10px;}
+.person .content .infobox {display: flex;justify-content: space-between;color:#8f8f94;}
+.person .content .actor-pic {width: 43%;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.2);}
+.person .content .infotext {margin-right:10px;width:48%;}
+.person .infotext .name {font-size: 20px;margin-top: 10px;font-weight:bold;}
+.person .infotext .enname {font-size: 14px;margin-top: 25px;}
+.person .infotext .bornplace {font-size: 14px;margin-bottom: 5px;}
+.person .infotext .nickname {font-size: 14px;}
+.person .infotext .imformation {font-weight:bold;}
+
+.person .works {margin-top: 20px;padding: 10px;}
+.person .works .title {font-size: 15px;font-weight:bold;margin-bottom:15px;}
+.person .works .work-list {padding-bottom: 10px;margin-bottom: 10px;}
+.person .works .work-list .link {display: flex;justify-content: space-between;}
+.person .work-detail {width: 59%;}
+.person .work-pic {width: 35%;height:180px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.2);}
+.person .workname {font-size: 16px;margin-bottom: 5px}
+.person .originname {color:#aaa;font-size: 14px;}
+.person .other {color:#aaa;font-size: 14px;}
+.person .types {margin-left: 5px;}
+.person .comment-num {font-size: 14px;color:#aaa;margin-top: 2px;}
+.person .score-box {margin-top: 2px;}
+.person .scorenum {color:#e09015;font-size: 14px;margin-left: 5px;}

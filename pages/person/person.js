@@ -5,14 +5,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imgurl: 'https://images.weserv.nl/?url=',
+    person:'',
+    works:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let kolento = 'https://xkolento.cn';
+    let pid = options.id;
+    console.log(options)
+    wx.request({
+      url: `${kolento}/movie/person/${pid}`,
+      data: {
+      },
+      header: {
+        'content-type': 'json' // 默认值
+      },
+      success: (res) => {
+        
+        res.data.personPic = res.data.avatars.large.substring(7);
+        this.setData({
+          person:res.data
+        })
+
+        let newworks = res.data.works.map((current,index,arr)=>{
+          return {
+            roles:current.roles,
+            subject:current.subject,
+            newpic: current.subject.images.large.substring(7)
+          }
+        })
+        this.setData({
+          works: newworks
+        })
+        console.log(newworks)
+        
+      }
+      
+    });
   },
 
   /**

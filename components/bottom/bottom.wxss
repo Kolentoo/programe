@@ -1,5 +1,6 @@
 /* components/bottom/bottom.wxss */
 
-.bottom {position:fixed;background: #fff;border-top: 1px solid #e6e6e6;display: flex;justify-content: center;bottom:0;left:0;width:100%;height:40px;}
-.bottom .bottom-list {font-size: 14px;color:#333;line-height: 40px;margin:0 auto;width: 50%;text-align: center;}
-.bottom .bottom-on {color:#e09015;}
+.bottom {position:fixed;background: #fff;display: flex;justify-content: center;top:0;left:0;width:100%;height:30px;}
+.bottom .bottom-list {font-size: 14px;color:#333;line-height: 30px;margin:0 auto;text-align: center;
+border-bottom:1px solid #e6e6e6;}
+.bottom .bottom-on {color:#e09015;border-bottom:1px solid #e09015;}
