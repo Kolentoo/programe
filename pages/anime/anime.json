@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "电视",
+  "usingComponents": {
+    "scroll": "../../components/scroll/scroll",
+    "bottom": "../../components/bottom/bottom"
+  }
+}

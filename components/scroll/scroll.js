@@ -7,6 +7,10 @@ Component({
     "moviedata":{
       type: Array,
       value:"" //不用填写自动传值
+    },
+    "kind":{
+      type:String,
+      value:""
     }
   },
 

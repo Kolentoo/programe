@@ -1,0 +1,36 @@
+<!--pages/anime/anime.wxml-->
+<!--pages/tv/tv.wxml-->
+
+<view class="animevariety">
+  <view class="type anime" hidden="{{show!=='动漫'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{animenew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{animehot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{animenice}}"></scroll>
+    </view>
+  </view>
+  <view class="type variety" hidden="{{show!=='综艺'}}">
+    <view class="hot movies">
+      <text class="mtitle">{{newtitle}}</text>
+      <scroll moviedata="{{varietynew}}"></scroll>
+    </view>
+    <view class="new movies">
+      <text class="mtitle">{{hottitle}}</text>
+      <scroll moviedata="{{varietyhot}}"></scroll>
+    </view>
+    <view class="nice movies">
+      <text class="mtitle">{{nicetitle}}</text>
+      <scroll moviedata="{{varietynice}}"></scroll>
+    </view>
+  </view>
+</view>
+
+<bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom>  
+

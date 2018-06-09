@@ -1,0 +1,22 @@
+/* pages/search/search.wxss */
+
+.searchbox {position:fixed;top: 0;left: 0;width: 100%;z-index:20;}
+.searchsection {padding:10px;display: flex;justify-content: space-between;border-bottom:1px solid #e6e6e6;}
+.searchinner {width: 84%;position:relative;}
+.searchwords {background: rgb(231,231,231);border-radius:8px;font-size: 16px;text-align: center;height: 34px;line-height: 34px;}
+.iconbox {position:absolute;top: 0;right: 0;z-index:10;background: rgb(231,231,231);width: 36px;text-align: center;height: 34px;
+display: flex;align-items: center;justify-content: center;border-radius:0 8px 8px 0;}
+.searchicon {width: 15px;height: 15px;}
+.cancel {font-size: 16px;color:#999;line-height: 34px;width: 13%;text-align: center;}
+
+.pickerbox {width:60px;height: 34px;position:absolute;left: 0;top: 0;border-radius:8px 0 0 8px;z-index:10;
+display: flex;align-items: center;justify-content: center;background: rgb(231,231,231);}
+.type {text-align: center;font-size: 14px;}
+.down {width: 13px;height: 13px;margin:2px 0 0 2px;}
+
+.tipstitle {display: flex;height: 15px;line-height: 15px;padding:30px 10px 15px 10px;}
+.tipsicon {width: 15px;height: 15px;}
+.tipsname {color:#d74d40;font-size: 14px;margin-left: 5px;}
+.tipsinner {padding:0 10px;display: flex;flex-wrap: wrap}
+.tipstxt {line-height: 25px;font-size: 14px;color:#d74d40;border:1px solid #d74d40;border-radius:4px;margin:0 10px 10px 0;
+padding:0 5px;height: 25px;}

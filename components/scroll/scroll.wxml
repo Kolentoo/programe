@@ -1,9 +1,8 @@
 <!--components/moviescroll/scroll.wxml-->
 <scroll-view scroll-x="true" class="scroll">
     <view wx:for="{{moviedata}}" wx:key="this" class="film-list">
-      <navigator url='../../pages/detail/detail?id={{item.id}}'>
+      <navigator url='../../pages/detail/detail?id={{item.id}}' wx:if="{{kind==='book'?false:true}}">
         <image src="{{imgurl}}{{item.newPic}}" class="film-image"/>  
-        <!-- <image wx:if="{{item.cover}}" src="https://images.weserv.nl/?url={{item.cover.substring(7)}}" class="film-image"/>  -->
         <text class="name">{{item.title}}</text>
         <view class="scorebox" wx:if="{{item.rating.average>=0}}">
           <star starscore="{{item.rating.average}}"></star>
@@ -16,6 +15,14 @@
         <view class="scorebox" wx:if="{{item.rate>=0}}">
           <star starscore="{{item.rate}}"></star>
           <text class="score">{{item.rate}}</text>
+        </view>
+      </navigator>
+      <navigator url='../../pages/bookdetail/bookdetail?id={{item.id}}' wx:if="{{kind==='book'?true:false}}">
+        <image src="{{imgurl}}{{item.newPic}}" class="film-image"/>  
+        <text class="name">{{item.title}}</text>
+        <view class="scorebox" wx:if="{{item.rating.average>=0}}">
+          <star starscore="{{item.rating.average}}"></star>
+          <text class="score">{{item.rating.average}}</text>
         </view>
       </navigator>
     </view>

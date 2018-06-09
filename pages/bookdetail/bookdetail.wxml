@@ -1,0 +1,41 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+
+<view class="detail">
+  <view class='banner'>
+    <image class="moviepic" src='{{imgurl}}{{info.newPic}}'></image>
+  </view>
+  <view class="moviecontent">
+    <view class="movieinfo">
+      <view class="name">{{info.title}}</view>
+      <view class="originname normal" wx:if="{{info.subtitle}}">副标题：{{info.subtitle}}</view>
+      <view class="author normal">
+            作者：
+          <text wx:for="{{info.author}}" wx:key="idx">{{item}} </text>
+      </view>
+      <view class="year normal">出版年份：{{info.pubdate}}</view>
+      <view class="pagenums normal">页数：{{info.pages}}</view>
+      <view class="binding normal">装帧：{{info.binding}}</view>
+      <view class="translator normal" wx:if="info.translator">翻译：{{info.translator}}</view>
+      <view class="publisher normal">出版社：{{info.publisher}}</view>
+      <view class="price normal">价格：{{info.price}}</view>
+    </view>
+    <view class="evaluate">
+      <view class="p1">评分</view>
+      <star starscore="{{info.rating.average}}"></star>
+      <view class="score b">{{info.rating.average}}</view>
+      <view class="member"><i class="b">{{info.rating.numRaters}}</i> 评价</view>
+    </view>
+  </view>
+  <view class="mstory">
+    <view class="title">剧情简介</view>
+    <view class="p1">
+        {{info.summary}}
+    </view>
+  </view>
+  <view class="mstory" wx:if="{{iinfo.author_intro}}">
+    <view class="title">作者简介</view>
+    <view class="p1">
+        {{iinfo.author_intro}}
+    </view>
+  </view>
+</view>

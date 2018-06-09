@@ -1,0 +1,94 @@
+<!--pages/book/book.wxml-->
+<!--pages/anime/anime.wxml-->
+<!--pages/tv/tv.wxml-->
+
+<view class="book">
+  <view class="type literature" hidden="{{show!=='文学'}}">
+    <view class="novel">
+      <text class="mtitle">{{noveltitle}}</text>
+      <scroll kind="book" moviedata="{{novel}}"></scroll>
+    </view>
+     <view class="essay">
+      <text class="mtitle">{{essaytitle}}</text>
+      <scroll kind="book" moviedata="{{essay}}"></scroll>
+    </view>
+    <view class="classic">
+      <text class="mtitle">{{classictitle}}</text>
+      <scroll kind="book" moviedata="{{classic}}"></scroll>
+    </view> 
+  </view>
+  <view class="type popular" hidden="{{show!=='流行'}}">
+    <view class="cartoon">
+      <text class="mtitle">{{cartoontitle}}</text>
+      <scroll kind="book" moviedata="{{cartoon}}"></scroll>
+    </view>
+     <view class="reasoning">
+      <text class="mtitle">{{reasoningtitle}}</text>
+      <scroll kind="book" moviedata="{{reasoning}}"></scroll>
+    </view>
+    <view class="youth">
+      <text class="mtitle">{{youthtitle}}</text>
+      <scroll kind="book" moviedata="{{youth}}"></scroll>
+    </view> 
+  </view>
+  <view class="type culture" hidden="{{show!=='文化'}}">
+    <view class="history">
+      <text class="mtitle">{{historytitle}}</text>
+      <scroll kind="book" moviedata="{{history}}"></scroll>
+    </view>
+     <view class="psychology">
+      <text class="mtitle">{{psychologytitle}}</text>
+      <scroll kind="book" moviedata="{{psychology}}"></scroll>
+    </view>
+    <view class="philosophy">
+      <text class="mtitle">{{philosophytitle}}</text>
+      <scroll kind="book" moviedata="{{philosophy}}"></scroll>
+    </view> 
+  </view>
+  <view class="type life" hidden="{{show!=='生活'}}">
+    <view class="love">
+      <text class="mtitle">{{lovetitle}}</text>
+      <scroll kind="book" moviedata="{{love}}"></scroll>
+    </view>
+     <view class="travel">
+      <text class="mtitle">{{traveltitle}}</text>
+      <scroll kind="book" moviedata="{{travel}}"></scroll>
+    </view>
+    <view class="daily">
+      <text class="mtitle">{{dailytitle}}</text>
+      <scroll kind="book" moviedata="{{daily}}"></scroll>
+    </view> 
+  </view>
+  <view class="type management" hidden="{{show!=='经管'}}">
+    <view class="economics">
+      <text class="mtitle">{{economicstitle}}</text>
+      <scroll kind="book" moviedata="{{economics}}"></scroll>
+    </view>
+     <view class="admin">
+      <text class="mtitle">{{admintitle}}</text>
+      <scroll kind="book" moviedata="{{admin}}"></scroll>
+    </view>
+    <view class="business">
+      <text class="mtitle">{{businesstitle}}</text>
+      <scroll kind="book" moviedata="{{business}}"></scroll>
+    </view> 
+  </view>
+  <view class="type science" hidden="{{show!=='科技'}}">
+    <view class="polularScience">
+      <text class="mtitle">{{polularSciencetitle}}</text>
+      <scroll kind="book" moviedata="{{polularScience}}"></scroll>
+    </view>
+     <view class="Internet">
+      <text class="mtitle">{{Internettitle}}</text>
+      <scroll kind="book" moviedata="{{Internet}}"></scroll>
+    </view>
+    <view class="programming">
+      <text class="mtitle">{{programmingtitle}}</text>
+      <scroll kind="book" moviedata="{{programming}}"></scroll>
+    </view> 
+  </view>
+
+</view>
+
+<bottom bindevent="changetype" bottomdata="{{bottomtype}}"></bottom>  
+

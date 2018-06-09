@@ -1,14 +1,17 @@
 {
   "pages": [
     "pages/films/films",
+    "pages/search/search",
+    "pages/menu/menu",
+    
     "pages/book/book",
     "pages/anime/anime",
     "pages/tv/tv",
-    
     "pages/robot/robot",
     "pages/detail/detail",
     "pages/logs/logs",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/bookdetail/bookdetail"
     
   ],
   "window": {
@@ -38,13 +41,13 @@
         "text": "漫综"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/book/book",
         "color": "#8f8f94",
         "selectedColor": "#e09015",
         "text": "图书"
       },
       {
-        "pagePath": "pages/robot/robot",
+        "pagePath": "pages/menu/menu",
         "color": "#8f8f94",
         "selectedColor": "#e09015",
         "text": "专题"

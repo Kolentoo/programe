@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "图书",
+  "usingComponents": {
+    "scroll": "../../components/scroll/scroll",
+    "bottom": "../../components/bottom/bottom"
+  }
+}

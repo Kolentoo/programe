@@ -147,7 +147,7 @@ Page({
 
       // 榜单部分
 
-      settimeout(()=>{
+      setTimeout(()=>{
 
         wx.request({
           url: `${kolento}/chart/top_list`,
