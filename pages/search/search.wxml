@@ -4,9 +4,9 @@
   <view class="searchwbox">
     <view class="searchsection">
       <view class="searchinner">
-        <input class="searchwords" value='' name="{{words}}" placeholder='请输入关键词'></input>
-        <view class="iconbox">
-          <image bindtap='search' class="searchicon" src='../../images/search.png'></image>
+        <input bindconfirm="search" bindinput='keywords' class="searchwords" value='' name="{{words}}" placeholder='请输入关键词'></input>
+        <view class="iconbox" bindtap='search'>
+          <image class="searchicon" src='../../images/search.png'></image>
         </view>
         <view class="pickerbox">
           <picker bindchange="typechange" mode ="selector" value="{{index}}" class="type" range="{{array}}">
@@ -19,16 +19,43 @@
       </text>
     </view>
   </view>
-  <view class="searchtips">
-    <view class="tipstitle">
-      <image class="tipsicon" src='../../images/best.png'></image>
-      <text class="tipsname">热门搜索</text>
-    </view>
-    <view class="tipsinner">
-      <text class="tipstxt" wx:for="{{searchgroup}}" wx:key="{{this}}">{{item}}</text>
-    </view>
+  <view class="searchtips" hidden="{{searching}}">
+      <text class="tips">暂无搜索条目</text>
   </view>
-  <view class="result">
+  <view class="result movieresult" wx:if="{{index==0}}" hidden="{{!searching}}">
+    <view class="resulttitle">{{searchtitle}}</view>
+    <view class="mlist clearfix" wx:for="{{moviedata}}"  wx:key="this">
+      <navigator class="clearfix" url='../../pages/detail/detail?id={{item.id}}'>
+      <image class="fl searchPic" src='{{imgurl}}{{item.newPic}}'></image>
+      <view class="detail">
+        <view class="title">{{item.title}}</view>
+        <view class="originaltitle">{{item.original_title}}</view>
+        <view class="scorebox clearfix">
+          <star class="fl" starscore="{{item.rating.average}}"></star>
+          <text class="score fl">{{item.rating.average}}</text>
+        </view>
+        <view class="comments">共有 <text class='nums'>{{item.collect_count}}</text> 人评价</view>
+      </view>
+      </navigator>
+    </view>
+    
+  </view>
+  <view class="result bookresult" wx:if="{{index==1}}" hidden="{{!searching}}">
+    <view class="resulttitle">搜索 {{words}} 的结果</view>
+    <view class="mlist clearfix" wx:for="{{bookdata}}"  wx:key="this">
+      <navigator class="clearfix" url='../../pages/bookdetail/bookdetail?id={{item.id}}'>
+        <image class="fl searchPic" src='{{imgurl}}{{item.newPic}}'></image>
+        <view class="detail">
+          <view class="title">{{item.title}}</view>
+          <view class="originaltitle">{{item.alt_title}}</view>
+          <view class="scorebox clearfix">
+            <star class="fl" starscore="{{item.rating.average}}"></star>
+            <text class="score fl">{{item.rating.average}}</text>
+          </view>
+          <view class="comments">共有 <text class='nums'>{{item.rating.numRaters}}</text> 人评价</view>
+        </view>
+      </navigator>
+    </view>
     
   </view>
 </view>

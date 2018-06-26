@@ -14,9 +14,16 @@ display: flex;align-items: center;justify-content: center;background: rgb(231,23
 .type {text-align: center;font-size: 14px;}
 .down {width: 13px;height: 13px;margin:2px 0 0 2px;}
 
-.tipstitle {display: flex;height: 15px;line-height: 15px;padding:30px 10px 15px 10px;}
-.tipsicon {width: 15px;height: 15px;}
-.tipsname {color:#d74d40;font-size: 14px;margin-left: 5px;}
-.tipsinner {padding:0 10px;display: flex;flex-wrap: wrap}
-.tipstxt {line-height: 25px;font-size: 14px;color:#d74d40;border:1px solid #d74d40;border-radius:4px;margin:0 10px 10px 0;
-padding:0 5px;height: 25px;}
+.searchtips {display: flex;align-items: center;justify-content: center;font-size: 16px;color:#999;margin-top:48%;}
+
+.result {padding:20px 10px;}
+.resulttitle {font-size: 16px;margin-bottom:15px;}
+.searchPic {width: 40%;border-radius:8px;height: 180px;}
+.mlist {margin-bottom:15px;}
+.detail {margin-left:45%;}
+.detail .title {font-size: 16px;font-weight: bold;margin-bottom: 8px;}
+.detail .originaltitle {font-size: 14px;}
+.scorebox {height: 36px;overflow: hidden;}
+.score {font-size: 14px;color:#42bd56;margin:5px 0 0 10px;}
+.comments {font-size: 14px;}
+.comments .nums {color:#42bd56;}

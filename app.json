@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/films/films",
+    "pages/about/about",
     "pages/search/search",
+    "pages/films/films",
     "pages/menu/menu",
-    
     "pages/book/book",
     "pages/anime/anime",
     "pages/tv/tv",
@@ -12,7 +12,6 @@
     "pages/logs/logs",
     "pages/person/person",
     "pages/bookdetail/bookdetail"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

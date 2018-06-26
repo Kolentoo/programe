@@ -9,7 +9,7 @@
       </view>
     </navigator>
   </view>
-  <view class="menu-list">
+  <!-- <view class="menu-list">
     <navigator url='../../pages/moviesubject/moviesubject'>
       <image class="vm mbj" src='../../images/mbj2.jpg'></image>
       <view class="chapter">
@@ -26,7 +26,7 @@
         <text class="cdesc block">Miracles happen every day</text>
       </view>
     </navigator>
-  </view>
+  </view> -->
   <view class="menu-list">
       <navigator url='../../pages/robot/robot'>
       <image class="vm mbj" src='../../images/mbj4.jpg'></image>

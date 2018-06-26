@@ -5,15 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
+    searching:false,
     words:'',
-    searchgroup: ["欧美", "言情", "村上村树", "电影", "美食", "金融", "设计", "传记", "健康", "生活", "杂文","张爱玲","西方哲学","艺术史","东野圭吾"],
     array:["电影","图书"],
-    index: 0
+    index: 0,
+    searchtitle:'',
+    moviedata:[],
+    bookdata:[],
+    kolento:'https://xkolento.cn',
+    imgurl: 'https://images.weserv.nl/?url='
   },
   typechange(e){
     this.setData({
       index: e.detail.value
     })
+    this.search();
   },  
 
   gomenu(){
@@ -22,13 +28,61 @@ Page({
     })
   },
 
-  search(e){
-    let keywords = e.detail.value;
-    console.log(e);
-    if (this.data.index===0){
+  keywords(key){
+    this.setData({
+      words:key.detail.value
+    })
+    console.log(this.data.words);
+  },
 
+  search(){
+    if (this.data.words){
+      this.setData({
+        searching:true
+      })
+      if (this.data.index===0){
+        wx.request({
+          url: `${this.data.kolento}/search/${this.data.words}`,
+          data: {
+          },
+          header: {
+            'content-type': 'json' // 默认值
+          },
+          success: (res) => {
+            this.setData({
+              searchtitle: res.data.title
+            })
+            var newmovie = res.data.subjects.map((current, index, arr) => {
+              return { ...current, newPic: current.images.large.substring(7) }
+            })
+            this.setData({
+              moviedata: newmovie
+            })
+            console.log(this.data.moviedata)
+          }
+        });
+      }else{
+        wx.request({
+          url: `${this.data.kolento}/booksearch/${this.data.words}`,
+          data: {
+          },
+          header: {
+            'content-type': 'json' // 默认值
+          },
+          success: (res) => {
+            console.log(res.data)
+            var newbook = res.data.books.map((current, index, arr) => {
+              return { ...current, newPic: current.images.large.substring(7) }
+            })
+            this.setData({
+              bookdata: newbook
+            })
+            console.log(this.data.bookdata)
+          }
+        });
+      }
     }else{
-
+      console.log('请输入关键字')
     }
   },
 
@@ -36,7 +90,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
