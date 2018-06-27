@@ -15,6 +15,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '',
+    })
     let kolento = 'https://xkolento.cn';
     let movieid = options.id;
     console.log(movieid)
@@ -27,16 +30,24 @@ Page({
       },
       success:  (res)=> {
         res.data.newPic = res.data.images.large.substring(7);
-        let newinfo1 = res.data.casts.map((current,index,arr)=>{
-          return { 
-            ...current.avatars, actorPic: current.avatars.large.substring(7),name:current.name,id:current.id
+        if (res.data.casts[0].avatars-0!=0){
+          var newinfo1 = res.data.casts.map((current,index,arr)=>{
+            return { 
+              ...current.avatars, actorPic: current.avatars.large.substring(7),name:current.name,id:current.id
+              }
+          })
+        }else{
+          var newinfo1 = [];
+        }
+        if (res.data.directors[0].avatars - 0 != 0) {
+          var newinfo2 = res.data.directors.map((current, index, arr) => {
+            return {
+              ...current.avatars, directorsPic: current.avatars.large.substring(7), name: current.name, id: current.id
             }
-        })
-        let newinfo2 = res.data.directors.map((current, index, arr) => {
-          return {
-            ...current.avatars, directorsPic: current.avatars.large.substring(7), name: current.name, id: current.id
-          }
-        })
+          })
+        }else{
+          var newinfo2 = [];
+        }
         
         this.setData({
           info: res.data
@@ -48,6 +59,7 @@ Page({
           directorsinfo: newinfo2
         })
         console.log(newinfo2)
+        wx.hideLoading();
       }
     });
   },

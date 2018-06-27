@@ -126,10 +126,10 @@ Page({
     let day = myDate.getDate();
     let firstday = wx.getStorageSync('today');
 
-    // loading配置
-    // wx.showLoading({
-    //   title: ''
-    // });
+    //loading配置
+    wx.showLoading({
+      title: ''
+    });
 
     // 判断是否每日首次登陆
     if (firstday != day) {
@@ -192,6 +192,7 @@ Page({
           });
           let classicstr = JSON.stringify(newclassic)
           wx.setStorageSync('classicdata', classicstr)
+          wx.hideLoading()
         }
       });
 
@@ -569,6 +570,7 @@ Page({
         this.setData({
           classic: classicJson
         });
+        wx.hideLoading()
       } else {
         wx.request({
           url: `${kolento}/booksearch/经典`,
@@ -587,6 +589,7 @@ Page({
             console.log(res.data)
             let classicstr = JSON.stringify(newclassic)
             wx.setStorageSync('classicdata', classicstr)
+            wx.hideLoading()
           }
         });
       }

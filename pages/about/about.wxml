@@ -1,4 +1,23 @@
 <!--pages/about/about.wxml-->
 <view class="about">
-  about myself
+  <image class="aboutbj" src='../../images/me.jpg'></image>
+  <view class="introduce">
+    <view class="conbox">
+      <text class="title {{action1===true?'titleon':''}}">WHAT YOU HAVE TO KNOW ABOUT ME.</text>
+      <view class="content">
+          <text class="clist normallist {{action2===true?'normalliston':''}}">
+                I am an Front-end Engineer focused on digital user experiences. Currently living in Shanghai, WA and working at Shanghai,an automotive advertising agency.
+          </text>
+          <text class="clist normallist {{action2===true?'normalliston':''}}">
+                My hobbies and passions include User Experience, Web Development, Digital Marketing and Photography. My goal is to solve problems through thoughtful ideas that translate into designs for various mediums.
+          </text>
+          <text class="clist lastlist {{action3===true?'lastliston':''}}">
+                Connect with me on Wechat 
+
+                Wechat : yuexiadeshenma
+                Email ： 515835543@QQ.com
+          </text>
+      </view>
+    </view>
+  </view>
 </view>

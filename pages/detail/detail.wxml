@@ -28,22 +28,22 @@
         {{info.summary}}
     </view>
   </view>
-  <view class="actor-box">
+  <view class="actor-box" wx:if="{{actorinfo.length>0}}">
     <text class="actor-title">演员</text>
     <scroll-view scroll-x class="actor">
       <view class="actor-list" wx:for="{{actorinfo}}" wx:key="this">
-        <navigator url='../../pages/person/person?id={{item.id}}'>
+        <navigator hover-class="none" url='../../pages/person/person?id={{item.id}}'>
           <image class="photo" src="{{imgurl}}{{item.actorPic}}"></image>
           <view class="actor-name">{{item.name}}</view>
         </navigator>
       </view>
     </scroll-view>
   </view>
-  <view class="actor-box">
+  <view class="actor-box" wx:if="{{directorsinfo.length>0}}">
     <text class="actor-title">导演</text>
     <scroll-view scroll-x class="actor">
       <view class="actor-list" wx:for="{{directorsinfo}}" wx:key="this">
-        <navigator url='../../pages/person/person?id={{item.id}}'>
+        <navigator hover-class="none" url='../../pages/person/person?id={{item.id}}'>
           <image class="photo" src="{{imgurl}}{{item.directorsPic}}"></image>
           <view class="actor-name">{{item.name}}</view>
         </navigator>

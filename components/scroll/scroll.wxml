@@ -1,7 +1,7 @@
 <!--components/moviescroll/scroll.wxml-->
 <scroll-view scroll-x="true" class="scroll">
     <view wx:for="{{moviedata}}" wx:key="this" class="film-list">
-      <navigator url='../../pages/detail/detail?id={{item.id}}' wx:if="{{kind==='book'?false:true}}">
+      <navigator hover-class="none" url='../../pages/detail/detail?id={{item.id}}' wx:if="{{kind==='book'?false:true}}">
         <image src="{{imgurl}}{{item.newPic}}" class="film-image"/>  
         <text class="name">{{item.title}}</text>
         <view class="scorebox" wx:if="{{item.rating.average>=0}}">
@@ -17,7 +17,7 @@
           <text class="score">{{item.rate}}</text>
         </view>
       </navigator>
-      <navigator url='../../pages/bookdetail/bookdetail?id={{item.id}}' wx:if="{{kind==='book'?true:false}}">
+      <navigator hover-class="none" url='../../pages/bookdetail/bookdetail?id={{item.id}}' wx:if="{{kind==='book'?true:false}}">
         <image src="{{imgurl}}{{item.newPic}}" class="film-image"/>  
         <text class="name">{{item.title}}</text>
         <view class="scorebox" wx:if="{{item.rating.average>=0}}">

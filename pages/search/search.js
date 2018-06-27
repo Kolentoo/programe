@@ -37,6 +37,9 @@ Page({
 
   search(){
     if (this.data.words){
+      wx.showLoading({
+        title: '',
+      })
       this.setData({
         searching:true
       })
@@ -59,6 +62,7 @@ Page({
               moviedata: newmovie
             })
             console.log(this.data.moviedata)
+            wx.hideLoading();
           }
         });
       }else{
@@ -78,11 +82,16 @@ Page({
               bookdata: newbook
             })
             console.log(this.data.bookdata)
+            wx.hideLoading();
           }
         });
       }
     }else{
-      console.log('请输入关键字')
+      wx.showToast({
+        title: '请输入关键字',
+        icon: 'none',
+        duration: 2000
+      })
     }
   },
 

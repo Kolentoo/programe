@@ -77,9 +77,9 @@ Page({
     let firstday = wx.getStorageSync('today');
 
     // loading配置
-    // wx.showLoading({
-    //   title: ''
-    // });
+    wx.showLoading({
+      title: ''
+    });
 
     // 判断是否每日首次登陆
     if (firstday != day) {
@@ -142,6 +142,7 @@ Page({
           });
           let topstr = JSON.stringify(newtop)
           wx.setStorageSync('topdata', topstr)
+          wx.hideLoading()
         }
       });
 
@@ -387,6 +388,8 @@ Page({
         this.setData({
           top: topJson
         });
+        wx.hideLoading()
+
       } else {
         wx.request({
           url: `${kolento}/v2/movie/top250`,
@@ -404,6 +407,8 @@ Page({
             });
             let topstr = JSON.stringify(newtop)
             wx.setStorageSync('topdata', topstr)
+            wx.hideLoading()
+
           }
         });
       }

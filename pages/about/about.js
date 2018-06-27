@@ -5,14 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    action1:false,
+    action2:false,
+    action3:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    setTimeout(()=>{
+      this.setData({
+        action1:true
+      })
+    },200)
+    setTimeout(() => {
+      this.setData({
+        action2: true
+      })
+    }, 500)
+    setTimeout(() => {
+      this.setData({
+        action3: true
+      })
+    }, 800)
   },
 
   /**
